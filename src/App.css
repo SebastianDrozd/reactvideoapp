@@ -1,6 +1,12 @@
 .App {
   text-align: center;
 }
+.app-main{
+  background: linear-gradient(rgba(18, 9, 18, 0.8), rgba(72, 104, 192, 0.8)), url("https://img.yts.mx/assets/images/movies/living_2022/background.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 .App-logo {
   height: 40vmin;

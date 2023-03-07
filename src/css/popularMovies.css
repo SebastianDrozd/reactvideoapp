@@ -1,0 +1,25 @@
+.popular-movies-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1em;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 2em;
+   
+}
+.pop-movie-card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 16em;
+    height: 22em;
+    margin: 1em;
+    cursor: pointer;
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; 
+}
+.pop-movie-card img{
+    width: 100%;
+    height: 100%;
+
+}

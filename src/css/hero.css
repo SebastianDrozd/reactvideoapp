@@ -1,0 +1,33 @@
+.hero-container{
+    padding: 2em;
+}
+.hero-title{
+    margin-top: 2em;
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.hero-sub{
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+}
+.hero-popular{
+    margin-top: 2em;
+    color: #fff;
+    margin-bottom: 1em;
+}
+.hero-popular i {
+    color: #39e341;
+    font-size: 1.5rem;
+    margin-right: 1em;
+}
+hr.solid {
+    margin-top: 1em;
+    border-top: 1px solid #bbb;
+    width: 75%;
+    margin: 0 auto;
+  }

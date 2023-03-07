@@ -1,23 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
-
+import React, { useEffect, useState } from 'react'
+import Navibar from './components/navibar';
+import Hero from './components/hero';
+import LandFooter from './components/landFooter';
+import { getPopularMovies } from './utils/requests'
+import PopularMovies from './components/popularMovies';
+import UpcomingMovies from './components/upcomingMovies';
 function App() {
+
+  const [popularMovies, setPopularMovies] = useState([])
+  const [upcomingMovies, setUpcomingMovies] = useState([])
+  useEffect(() => {
+    
+    getPopularMovies().then((res) => {
+      console.log("this is res ",res.data)
+        setPopularMovies(res.data.slice(0,4))
+        setUpcomingMovies(res.data.slice(4,10))
+    })
+},[])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navibar/>
+      <div className="app-main">
+      <Hero/>  
+      <PopularMovies popularMovies = {popularMovies}/>
+      <UpcomingMovies upComingMovies = {upcomingMovies}/>
+      </div>
+      <LandFooter/>
     </div>
   );
 }
