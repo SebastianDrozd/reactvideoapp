@@ -1,0 +1,82 @@
+.search-main-container{
+    height:20em;
+    background: black;
+}
+.search-container{
+    width: 65%;
+    margin: 0 auto;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+}
+.browse-search-bar{
+    border-radius: 3px;
+    height: 2em;
+    border: none;
+    padding: 1em;
+    font-size: 1.5em;
+    color: white;
+    background: #1e1e1e;
+}
+.select-container{
+    margin-top: 1em;
+   margin-right: 1em;
+}
+.search-filters{
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+}
+.select-container select{
+    margin: 0;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    width: 130px;
+    padding-left: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    height: 40px;
+    color: #a2a2a2;
+    font-size: .9em;
+    font-weight: normal;
+    overflow: hidden;
+    background:#282828 ;
+    border: 0;
+}
+.select-title{
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: .9em;
+    color: #5a5a5a;
+
+}
+.browse-button{
+  display: inline-flex;
+    align-items: center;
+    border: 0;
+   height: 12px;
+   margin-top: 40px;
+    border-radius: 3px;
+    border: none;
+    padding: 1em;
+    font-size: 1.2rem;
+    color: white;
+    background: #6ac045;
+    cursor: pointer;
+   
+}
+.browse-title{
+    font-size: 2em;
+    color: white;
+    margin-bottom: 1em;
+}
+.browse-movies{
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

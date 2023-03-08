@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
 import React, { useEffect, useState } from 'react'
 import Navibar from './components/navibar';
 import Hero from './components/hero';
@@ -7,28 +8,20 @@ import LandFooter from './components/landFooter';
 import { getPopularMovies } from './utils/requests'
 import PopularMovies from './components/popularMovies';
 import UpcomingMovies from './components/upcomingMovies';
+import LandingPage from './routes/landingPage';
+import MoviePage from './routes/moviePage';
+import BrowseMoviePage from './routes/browseMoviePage';
 function App() {
-
-  const [popularMovies, setPopularMovies] = useState([])
-  const [upcomingMovies, setUpcomingMovies] = useState([])
-  useEffect(() => {
-    
-    getPopularMovies().then((res) => {
-      console.log("this is res ",res.data)
-        setPopularMovies(res.data.slice(0,4))
-        setUpcomingMovies(res.data.slice(4,10))
-    })
-},[])
   return (
-    <div className="App">
-      <Navibar/>
-      <div className="app-main">
-      <Hero/>  
-      <PopularMovies popularMovies = {popularMovies}/>
-      <UpcomingMovies upComingMovies = {upcomingMovies}/>
-      </div>
+    <>
+      <Navibar />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/movies/:id" element={<MoviePage/>} />
+        <Route path ="/browse" element={<BrowseMoviePage/>}/>
+      </Routes>
       <LandFooter/>
-    </div>
+    </>
   );
 }
 

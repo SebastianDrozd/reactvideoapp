@@ -1,0 +1,71 @@
+.movie-page-container{
+    padding: 6em;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.movie-page{
+    background: linear-gradient(rgba(18, 9, 18, 0.8), rgba(72, 104, 192, 0.8)), url("https://img.yts.mx/assets/images/movies/living_2022/background.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.movie-poster{
+
+}
+.movie-poster img{
+    width: 18em;
+    height: 25em;
+}
+.movie-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2em;
+    color: white;
+}
+.movie-title{
+    margin-bottom: 1em;
+}
+.movie-categories{
+    display: flex;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.cat-ind{
+    margin-right: 1em;
+}
+.likes-div{
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.likes-num{
+    margin-left: 1em;
+}
+.review-div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.movie-desc{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: white;
+    line-height: 2rem;
+    width: 50%;
+}
+@media screen and (max-width: 600px) {
+    .movie-page-container{
+        padding: 2em;
+        flex-direction: column;
+    }
+    .movie-poster img{
+        width: 12em;
+        height: 18em;
+    }
+   
+}

@@ -1,22 +1,27 @@
 import React from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import "../css/navbar.css"
+import SearchBar from './searchBar'
 const Navibar = () => {
+    const navigate = useNavigate()
+    const handleBrowseButton = () => {
+        navigate('/browse')
+    }
+    const handleLogoButton = () => {
+        navigate('/')
+    }
     return (
         <>
             <div className='navbar-container'>
                 <div className="navbar-logo">
-                    <h3>OnlineMovies<span className='navbar-span'>.net</span></h3>
+                    <h3 style={{ cursor: "pointer" }} onClick={handleLogoButton}>OnlineMovies<span className='navbar-span'>.net</span></h3>
                 </div>
-                <div className='navbar-searchbar'>
-                    <i className="fa fa-search search" aria-hidden="true"></i>
-                    <input className='navbar-input' type="text" />
-                </div>
+                <SearchBar />
                 <div className='navbar-links'>
                     <ul>
                         <li>Home</li>
-                        <li>Trending</li>
-                        <li>Browse Movies</li>
-                    </ul>   
+                        <li style={{cursor: "pointer"}} onClick={handleBrowseButton}>Browse Movies</li>
+                    </ul>
                 </div>
             </div></>
     )

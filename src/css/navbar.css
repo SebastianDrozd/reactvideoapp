@@ -16,13 +16,14 @@
     color: white;
     font-size: 16px;
 }
+
 .navbar-searchbar{
     background: #404040;
     border-radius: 10px;
     padding: 5px 10px;
     display: flex;
     align-items: center;
-    width: 300px;
+    width: 320px;
 }
 .navbar-searchbar i {
     color: rgb(192, 192, 192);

@@ -1,0 +1,35 @@
+.search-all{
+    display: flex;
+    flex-direction: column;
+}
+.search-dropdown{
+    position: absolute;
+    top: 47px;
+    background: rgb(0, 0, 0);
+    width: 20em;
+}
+.search-dropdown ul li{
+    list-style: none;
+    padding: 1em;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.query-row{
+    display: flex;
+    align-items: center;
+    justify-content: flex;
+    padding: 0 1em;
+}
+.search-button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-left: 1px solid white;
+    padding: 5px;
+}
+.dont-show{
+    display: none;
+}
