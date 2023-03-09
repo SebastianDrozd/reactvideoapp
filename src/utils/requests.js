@@ -18,5 +18,26 @@ export const getPaginationMovies = (page, limit) => {
    return axios.get(`http://10.0.0.234:4000/api/v1/videos/query/paginate?page=${page}&limit=${limit}`)
 }
 export const getPaginationMovieWithQuery = (page, limit, query) => {
-
+   let result = ""
+  if(query.name != ""){
+   result += `&name=${query.name}`
+  }
+  if(query.genre != ""){
+   if(query.genre == "all"){
+      result +=""
+   }
+   else{
+      result += `&genre=${query.genre}`
+   }
+  }
+   if(query.year != ""){
+      if(query.year == "0"){
+         result +=""
+      }
+      else{
+         result += `&year=${query.year}`
+      }
+   }
+   console.log(`http://10.0.0.234:4000/api/v1/videos/query/paginatesort?page=${page}&limit=${limit}${result}`)
+   return axios.get(`http://10.0.0.234:4000/api/v1/videos/query/paginatesort?page=${page}&limit=${limit}${result}`)
 }

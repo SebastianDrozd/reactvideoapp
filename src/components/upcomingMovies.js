@@ -16,12 +16,16 @@ const UpcomingMovies = (props) => {
             {upComingMovies && upComingMovies.map((video) => (<>
                 <div onClick={() => navigate(`/movies/${video.id}`)} className="pop-movie-card">
                     <img src={video.image} alt="" />
+                    <div  className="caption">
+                            <h3>{video.title}</h3>
+                            <p>{video.category_names}</p>
+                        </div>
                 </div>
             </>))}
             </div>
-            <br />
-            <br />
-            <br />
+            
+           
+           
             <br />
             <br />
             <br />

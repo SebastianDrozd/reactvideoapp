@@ -7,7 +7,8 @@ const Navibar = () => {
     const handleBrowseButton = () => {
         navigate('/browse')
     }
-    const handleLogoButton = () => {
+    const handleLogoButton = (e) => {
+        e.preventDefault()
         navigate('/')
     }
     return (
@@ -19,7 +20,7 @@ const Navibar = () => {
                 <SearchBar />
                 <div className='navbar-links'>
                     <ul>
-                        <li>Home</li>
+                        <li style={{cursor: "pointer"}}  onClick={handleLogoButton}>Home</li>
                         <li style={{cursor: "pointer"}} onClick={handleBrowseButton}>Browse Movies</li>
                     </ul>
                 </div>

@@ -27,9 +27,16 @@
     border: none;
     cursor: pointer;
     color: white;
-    border-left: 1px solid white;
+    border-left: 1px solid rgba(255, 255, 255, 0.434);
     padding: 5px;
 }
 .dont-show{
     display: none;
+}
+@media screen and (max-width: 600px) {
+    .search-dropdown{
+        
+        top: 90px;
+    }
+   
 }

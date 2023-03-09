@@ -1,6 +1,7 @@
 .browse-movie-section-container{
     background-color: #1d1d1d;
     height: 100%;
+    padding-bottom: 5em;
 }
 .browse-title{
     text-align: center;

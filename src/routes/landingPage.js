@@ -10,11 +10,6 @@ const LandingPage = () => {
     const [popularMovies, setPopularMovies] = useState([])
     const [upcomingMovies, setUpcomingMovies] = useState([])
     useEffect(() => {
-      //  getMovies().then((res) => {
-     //       console.log("this is res ", res.data)
-      //      setPopularMovies(res.data.slice(0, 4))
-      //      setUpcomingMovies(res.data.slice(4, 10))
-     //   })
     sortQueryMovies("views", "desc").then((res) => {
             setPopularMovies(res.data.slice(0, 4))
         })

@@ -7,8 +7,12 @@ const BrowseMoviePage = () => {
     const genre = useRef()
     const year = useRef()
     const [searchUsed, setSearchUsed] = useState(false)
+    const [movies, setMovies] = useState([])
+    const [searchQuery, setSearchQuery] = useState({})
+    const [searchClicked,setSearchCLicked] = useState(0)
     const handleSearch = (e) => {
         setSearchUsed(true)
+        setSearchCLicked(searchClicked+1)
         e.preventDefault()
         console.log(searchTerm.current.value)
         console.log(genre.current.value)
@@ -18,7 +22,13 @@ const BrowseMoviePage = () => {
             genre : genre.current.value,
             year : year.current.value
         }
-        getPaginationMovieWithQuery()
+        setSearchQuery(query)
+        getPaginationMovieWithQuery(1,10,query)
+            .then((res) => {
+                console.log(res.data)
+                setMovies(res.data)
+            })
+        
     }
     return (
         <>
@@ -104,7 +114,7 @@ const BrowseMoviePage = () => {
                         </div>
                     </div>
                 </div>
-                <BrowseMovieSection/>
+                <BrowseMovieSection queriedMovies = {movies} searchUsed = {searchUsed} query={searchQuery} clicked = {searchClicked}/>
             </div>
         </>
     )

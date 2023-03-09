@@ -57,22 +57,7 @@ const MoviePage = () => {
             <br />
             <VideoPlayer name = {movie && movie.title}/>
             <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+          
             
             </div>
         </>

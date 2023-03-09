@@ -1,9 +1,19 @@
+.browse-main-container{
+    background: black;
+   
+}
 .search-main-container{
     height:20em;
     background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+
 }
 .search-container{
-    width: 65%;
+    width: 100%;
     margin: 0 auto;
     padding: 2em;
     display: flex;

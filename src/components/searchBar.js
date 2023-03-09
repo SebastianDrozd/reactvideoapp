@@ -1,9 +1,11 @@
 import React, { useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import "../css/searchBar.css"
 import { requestMovieQuery } from '../utils/requests'
 const SearchBar = () => {
     const [queriedMovies, setQueriedMovies] = useState([])
     const searchRef = useRef()
+    const navigate = useNavigate()
     const handleMovieQuery= () => {
         if(searchRef.current.value === ""){
             setQueriedMovies([])
@@ -13,6 +15,7 @@ const SearchBar = () => {
            setQueriedMovies(res.data)
        })
     }
+
 
     return (
         <>
@@ -25,7 +28,7 @@ const SearchBar = () => {
                 <div className="search-dropdown">
                     <ul>
                        {queriedMovies && queriedMovies.map((movie) => (<>
-                       <li className="query-row">
+                       <li onClick={() => {navigate(`/movies/${movie.id}`);setQueriedMovies([])}} className="query-row">
                         <img src={movie.image} height="100" width={100} alt="" />
                         <p style={{marginLeft:'10px'}}>{movie.title}</p>
                        </li>
